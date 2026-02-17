@@ -7,8 +7,8 @@ const HeroSection = () => {
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
+        style={{ backgroundImage: `url(${heroImage})` }} />
+
       <div className="absolute inset-0 bg-gradient-hero" />
 
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -16,8 +16,8 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-3xl mx-auto"
-        >
+          className="max-w-3xl mx-auto">
+
           <div className="flex items-center justify-center gap-2 mb-6">
             <Sparkles className="text-salon-gold" size={20} />
             <span className="font-body text-sm uppercase tracking-[0.3em] text-primary-foreground/80">
@@ -38,21 +38,21 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#servicos"
-              className="bg-salon-gold text-accent-foreground px-8 py-4 rounded-full font-body font-bold text-sm uppercase tracking-wider hover:opacity-90 transition-opacity shadow-gold"
-            >
+              className="bg-salon-gold text-accent-foreground px-8 py-4 rounded-full font-body font-bold text-sm uppercase tracking-wider hover:opacity-90 transition-opacity shadow-gold">
+
               Nossos Serviços
             </a>
             <a
-              href="#contato"
-              className="border-2 border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-full font-body font-bold text-sm uppercase tracking-wider hover:bg-primary-foreground/10 transition-colors"
-            >
+
+              className="border-2 border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-full font-body font-bold text-sm uppercase tracking-wider hover:bg-primary-foreground/10 transition-colors" href="+351965752907">
+
               Fale Conosco
             </a>
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
