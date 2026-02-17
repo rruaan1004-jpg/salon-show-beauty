@@ -1,83 +1,133 @@
-import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salon Show</title>
 
-const navLinks = [
-{ label: "Início", href: "#inicio" },
-{ label: "Serviços", href: "#servicos" },
-{ label: "Sobre", href: "#sobre" },
-{ label: "Contato", href: "#contato" }];
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    font-family: Arial, sans-serif;
+    background:#fafafa;
+    color:#333;
+    line-height:1.6;
+}
 
+header{
+    background:#c94f7c;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+header h1{
+    font-size:2rem;
+}
 
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="#inicio" className="font-display text-2xl font-bold text-primary tracking-wide">
-          Salon <span className="text-gradient-gold">Show</span>
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.section{
+    background:white;
+    margin:20px 0;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+h2{
+    margin-bottom:15px;
+    color:#c94f7c;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:12px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    object-fit:cover;
+    height:220px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    background:#25D366;
+    color:white;
+    padding:14px 22px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Nome do Salão</h1>
+    <p>Beleza, cuidado e estilo em um só lugar</p>
+</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>Sobre nós</h2>
+        <p>
+            Aqui você pode colocar um texto simples sobre o salão.
+            Atendimento personalizado, ambiente acolhedor e profissionais experientes.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Nossos serviços (exemplo)</h2>
+        <p>💇 Corte feminino — 25€</p>
+        <p>💅 Manicure — 15€</p>
+        <p>✨ Escova — 20€</p>
+    </div>
+
+    <div class="section">
+        <h2>Trabalhos realizados</h2>
+        <div class="gallery">
+            <img src="foto1.jpg" alt="Trabalho 1">
+            <img src="foto2.jpg" alt="Trabalho 2">
+            <img src="foto3.jpg" alt="Trabalho 3">
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Contato</h2>
+        <p><strong>Endereço:</strong> Rua Exemplo, 123 – Lisboa</p>
+        <p><strong>Instagram:</strong> @nomedosalao</p>
+        <p><strong>Horário:</strong> Seg–Sáb 9h às 19h</p>
+
+        <a class="btn"
+           href="https://wa.me/351912345678?text=Olá,%20quero%20agendar"
+           target="_blank">
+           Agendar no WhatsApp
         </a>
+    </div>
 
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) =>
-          <a
-            key={link.href}
-            href={link.href}
-            className="font-body text-sm tracking-wider uppercase text-foreground/70 hover:text-primary transition-colors duration-300">
+</div>
 
-              {link.label}
-            </a>
-          )}
-          <a
+<footer>
+    Site demonstrativo
+</footer>
 
-            className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-body font-bold tracking-wide hover:opacity-90 transition-opacity" href="tel:+351965752907">
-
-            <Phone size={14} />
-            Agendar
-          </a>
-        </nav>
-
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setIsOpen(!isOpen)}>
-
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      <AnimatePresence>
-        {isOpen &&
-        <motion.div
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: "auto", opacity: 1 }}
-          exit={{ height: 0, opacity: 0 }}
-          className="md:hidden bg-card border-b border-border overflow-hidden">
-
-            <nav className="flex flex-col items-center gap-4 py-6">
-              {navLinks.map((link) =>
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="font-body text-sm tracking-wider uppercase text-foreground/70 hover:text-primary transition-colors">
-
-                  {link.label}
-                </a>
-            )}
-              <a
-              href="tel:+5511999999999"
-              className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-bold">
-
-                <Phone size={14} />
-                Agendar
-              </a>
-            </nav>
-          </motion.div>
-        }
-      </AnimatePresence>
-    </header>);
-
-};
-
-export default Header;
+</body>
+</html>
