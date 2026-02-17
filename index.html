@@ -1,26 +1,89 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salon Show</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background:#fafafa;
+        color:#333;
+    }
 
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    header {
+        background:#c94f7c;
+        color:white;
+        text-align:center;
+        padding:40px 20px;
+    }
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    h1 { margin:0; }
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+    .container {
+        max-width:900px;
+        margin:auto;
+        padding:20px;
+    }
+
+    .card {
+        background:white;
+        padding:20px;
+        margin:20px 0;
+        border-radius:10px;
+        box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+        display:inline-block;
+        background:#25D366;
+        color:white;
+        padding:14px 22px;
+        text-decoration:none;
+        border-radius:8px;
+        font-weight:bold;
+        margin-top:10px;
+    }
+
+    footer {
+        text-align:center;
+        padding:20px;
+        color:#777;
+        font-size:14px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Salon Show</h1>
+    <p>Beleza e elegância com atendimento personalizado</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Sobre o salão</h2>
+        <p>Especialistas em cabelo, manicure e estética. Atendimento com carinho e qualidade.</p>
+    </div>
+
+    <div class="card">
+        <h2>Contato</h2>
+        <p><strong>Endereço:</strong> Rua Exemplo, 123 – Lisboa</p>
+        <p><strong>Instagram:</strong> @salonshow</p>
+        <p><strong>Horário:</strong> Seg–Sáb 9h às 19h</p>
+
+        <a class="btn" href="https://wa.me/351912345678?text=Olá,%20quero%20agendar" target="_blank">
+            Agendar no WhatsApp
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Salon Show — Site demonstrativo
+</footer>
+
+</body>
+  </html>
