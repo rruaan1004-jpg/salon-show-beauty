@@ -555,19 +555,55 @@ Quero acesso imediato
 
 </footer>
 
+<!-- CTA FLUTUANTE CORRIGIDO -->
 
-<!-- CTA FIXO -->
+<div class="cta-fixo">
 
-<div style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:9999;">
-
-<a href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10"
-style="background:#4F7D6A;color:white;padding:16px 26px;border-radius:10px;font-weight:600;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,0.25);">
+<a href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10">
 
 Garantir acesso ao método
 
 </a>
 
 </div>
+
+<style>
+
+.cta-fixo{
+position:fixed;
+bottom:20px;
+left:0;
+width:100%;
+display:flex;
+justify-content:center;
+z-index:9999;
+pointer-events:none;
+}
+
+.cta-fixo a{
+pointer-events:auto;
+background:#4F7D6A;
+color:white;
+padding:16px 28px;
+border-radius:12px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+max-width:320px;
+width:90%;
+text-align:center;
+}
+
+@media(min-width:900px){
+
+.cta-fixo{
+display:none;
+}
+
+}
+
+</style>
+
 
 </body>
    </html>
