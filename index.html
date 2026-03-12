@@ -9,6 +9,25 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+<!-- PIXEL META -->
+<script>
+/* COLE SEU PIXEL ID ABAIXO */
+
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'PIXEL_ID_AQUI');
+fbq('track', 'PageView');
+</script>
+
 <style>
 
 *{
@@ -48,6 +67,14 @@ display:block;
 border-radius:10px;
 }
 
+.img-center{
+width:100%;
+max-width:500px;
+height:auto;
+margin:40px auto 0 auto;
+display:block;
+}
+
 h1{
 font-size:42px;
 margin-bottom:20px;
@@ -73,6 +100,11 @@ border-radius:8px;
 text-decoration:none;
 margin-top:20px;
 font-weight:600;
+}
+
+.cta-center{
+text-align:center;
+margin-top:30px;
 }
 
 .trust{
@@ -127,8 +159,7 @@ font-size:32px;
 
 <body>
 
-
-<!-- 1 HERO -->
+<!-- HERO -->
 
 <section>
 
@@ -158,54 +189,33 @@ Quero recuperar o controle da minha alimentação
 
 </section>
 
-
-
 <div class="trust">
-
 ✔ Compra segura • ✔ Acesso imediato • ✔ Garantia de 7 dias
-
 </div>
 
-
-
-<!-- 2 ESPELHO DA DOR -->
+<!-- ESPELHO DA DOR -->
 
 <section class="soft">
 
 <div class="container grid">
 
 <div>
-
 <img src="dor-compulsao.jpg">
-
 </div>
 
 <div>
 
 <h2>Você promete que vai controlar a alimentação…</h2>
 
-<p>
-Mas quando percebe já está comendo sem controle.
-</p>
-
-<p>
-Depois vem a culpa e a frustração.
-</p>
-
-<p>
-E a promessa de começar novamente amanhã.
-</p>
+<p>Mas quando percebe já está comendo sem controle.</p>
+<p>Depois vem a culpa e a frustração.</p>
+<p>E a promessa de começar novamente amanhã.</p>
 
 </div>
 
 </div>
 
 </section>
-
-
-
-<!-- 3 PROBLEMA -->
-
 <section>
 
 <div class="container center">
@@ -216,80 +226,56 @@ E a promessa de começar novamente amanhã.
 A compulsão alimentar acontece quando emoções como ansiedade ou estresse ativam o sistema de recompensa do cérebro.
 </p>
 
-<img src="cerebro-compulsao.jpg"
-   style="margin-top:40px;max-width:500px;">
+<img src="cerebro-compulsao.jpg" class="img-center">
+
+<div class="cta-center">
+<a class="btn" href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10">
+Quero começar a recuperar o controle
+</a>
+</div>
 
 </div>
 
 </section>
-
-
-
-<!-- 4 MECANISMO -->
 
 <section class="soft">
-
-<div class="container center">
-
-<h2>O método atua diretamente nos gatilhos emocionais</h2>
-
-<p>
-Ao identificar os gatilhos e interromper o impulso antes da ação, o ciclo da compulsão começa a se quebrar.
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- 5 CICLO -->
-
-<section>
 
 <div class="container center">
 
 <h2>O ciclo da compulsão alimentar</h2>
 
 <p style="font-size:20px;margin-top:30px">
-
-Ansiedade → Desejo → Comer impulsivamente → Alívio momentâneo → Culpa → Repetição
-
+Ansiedade → Desejo → Comer impulsivamente → Alívio → Culpa → Repetição
 </p>
 
 </div>
 
 </section>
 
-
-
-<!-- 6 TRANSFORMAÇÃO -->
-
-<section class="soft">
+<section>
 
 <div class="container center">
 
 <h2>Uma nova relação com a comida é possível</h2>
 
-<img src="transformacao.jpg"
-  style="max-width:450px;margin-top:40px;">
+<img src="transformacao.jpg" class="img-center">
+
+<div class="cta-center">
+<a class="btn" href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10">
+Quero essa transformação
+</a>
+</div>
 
 </div>
 
 </section>
 
-
-
-<!-- 7 PRODUTO -->
-
-<section>
+<section class="soft">
 
 <div class="container grid">
 
 <div>
-
 <img src="ebook-capa.png">
-
 </div>
 
 <div>
@@ -300,17 +286,19 @@ Ansiedade → Desejo → Comer impulsivamente → Alívio momentâneo → Culpa 
 Um guia prático criado para ajudar pessoas que desejam recuperar o controle emocional sobre a alimentação.
 </p>
 
+<div class="cta-center">
+<a class="btn" href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10">
+Quero acessar o método
+</a>
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-
-
-<!-- 8 MÉTODO -->
-
-<section class="soft">
+<section>
 
 <div class="container center">
 
@@ -326,30 +314,20 @@ Um guia prático criado para ajudar pessoas que desejam recuperar o controle emo
 
 </div>
 
-</section>
-
-
-
-<!-- 9 O QUE RECEBE -->
-
-<section>
+   </section>
+   <section class="soft">
 
 <div class="container center">
 
 <h2>Tudo que você recebe</h2>
 
-<img src="checklist-bonus.png"
-  style="max-width:400px;margin-top:40px;">
+<img src="checklist-bonus.png" class="img-center">
 
 </div>
 
 </section>
 
-
-
-<!-- 10 BENEFÍCIOS -->
-
-<section class="soft">
+<section>
 
 <div class="container">
 
@@ -358,72 +336,22 @@ Um guia prático criado para ajudar pessoas que desejam recuperar o controle emo
 <div class="cards">
 
 <div class="card">✔ Reduzir episódios de compulsão</div>
-
 <div class="card">✔ Recuperar controle alimentar</div>
-
 <div class="card">✔ Desenvolver consciência alimentar</div>
 
 </div>
 
-</div>
-
-  </section>
-  <!-- 11 PROVA SOCIAL -->
-
-<section>
-
-<div class="container">
-
-<h2 class="center">O que algumas pessoas relataram</h2>
-
-<div class="cards">
-
-<div class="card">
-“Comecei a perceber meus gatilhos emocionais e isso mudou minha relação com a comida.”
-</div>
-
-<div class="card">
-“O material ajudou a entender por que eu comia por ansiedade.”
-</div>
-
-<div class="card">
-“As estratégias são simples e fáceis de aplicar.”
-</div>
-
+<div class="cta-center">
+<a class="btn" href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10">
+Começar agora
+</a>
 </div>
 
 </div>
 
 </section>
-
-
-
-<!-- 12 FAQ -->
 
 <section class="soft">
-
-<div class="container center">
-
-<h2>Perguntas Frequentes</h2>
-
-<p><strong>Preciso fazer dieta restritiva?</strong><br>
-Não. O método foca em consciência alimentar.</p>
-
-<p style="margin-top:20px"><strong>Quando recebo o material?</strong><br>
-O acesso é imediato após a compra.</p>
-
-<p style="margin-top:20px"><strong>Funciona mesmo se já tentei dietas?</strong><br>
-Sim, porque trabalha nos gatilhos emocionais.</p>
-
-</div>
-
-</section>
-
-
-
-<!-- 13 GARANTIA -->
-
-<section>
 
 <div class="container center">
 
@@ -433,34 +361,15 @@ Sim, porque trabalha nos gatilhos emocionais.</p>
 Se você não gostar do conteúdo, basta solicitar o reembolso.
 </p>
 
+<div class="cta-center">
+<a class="btn" href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10">
+Testar o método sem risco
+</a>
 </div>
-
-</section>
-
-
-
-<!-- 14 ANCORAGEM -->
-
-<section class="soft">
-
-<div class="container center">
-
-<h2>Valor real do material</h2>
-
-<p>Ebook – 19€</p>
-<p>Checklist – 9€</p>
-<p>Guia ansiedade – 12€</p>
-<p>Plano alimentar – 7€</p>
-
-<p style="font-size:22px;margin-top:20px"><strong>Total: 47€</strong></p>
 
 </div>
 
 </section>
-
-
-
-<!-- 15 OFERTA -->
 
 <section>
 
@@ -480,32 +389,34 @@ Quero começar agora
 
 </section>
 
+<footer style="background:#2f5c45;color:white;padding:40px;text-align:center">
+<p>© 2026 - Todos os direitos reservados</p>
+</footer>
 
+<!-- CTA FLUTUANTE -->
 
-<!-- 16 CTA FINAL -->
+<div style="
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+z-index:999;
+">
 
-<section class="soft">
-
-<div class="container center">
-
-<h2>Comece hoje a recuperar o controle sobre sua alimentação</h2>
-
-<a class="btn" href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10">
-Quero acesso imediato
+<a href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10"
+style="
+background:#4F7D6A;
+color:white;
+padding:16px 28px;
+border-radius:8px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+">
+Garantir acesso ao método
 </a>
 
 </div>
 
-</section>
-
-
-
-<footer style="background:#2f5c45;color:white;padding:40px;text-align:center">
-
-<p>© 2026 - Todos os direitos reservados</p>
-
-</footer>
-
-
 </body>
-  </html>
+</html>
