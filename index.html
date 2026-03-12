@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,25 +19,44 @@ box-sizing:border-box;
 
 body{
 font-family:'Inter',sans-serif;
-background:#F6F8F7;
+background:#F7FAF8;
 color:#1A1A1A;
 line-height:1.7;
 }
 
 .container{
-max-width:1200px;
+max-width:1100px;
 margin:auto;
-padding:120px 30px;
+padding:80px 20px;
+}
+
+section{
+padding:70px 0;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+img{
+max-width:100%;
+height:auto;
+display:block;
+border-radius:10px;
 }
 
 h1{
-font-size:46px;
-margin-bottom:25px;
+font-size:42px;
+margin-bottom:20px;
 }
 
 h2{
-font-size:36px;
-margin-bottom:25px;
+font-size:32px;
+margin-bottom:20px;
+color:#2f5c45;
 }
 
 p{
@@ -48,90 +68,81 @@ color:#444;
 display:inline-block;
 background:#4F7D6A;
 color:white;
-padding:18px 34px;
+padding:16px 30px;
 border-radius:8px;
 text-decoration:none;
+margin-top:20px;
 font-weight:600;
-margin-top:30px;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:translateY(-2px);
-}
-
-.hero{
-background:#F6F8F7;
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:80px;
-align-items:center;
-}
-
-.hero img{
-width:100%;
-max-width:420px;
 }
 
 .trust{
 background:#E3F1E8;
 text-align:center;
-padding:25px;
+padding:20px;
 font-size:15px;
 }
 
-.section-alt{
+.soft{
 background:#E3F1E8;
 }
 
-.grid{
+.center{
+text-align:center;
+max-width:750px;
+margin:auto;
+}
+
+.cards{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:80px;
-align-items:center;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:40px;
 }
 
-img{
-max-width:100%;
-border-radius:10px;
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
-.fade{
-opacity:0;
-transform:translateY(40px);
-transition:all 0.7s ease;
+@media(max-width:900px){
+
+.grid{
+grid-template-columns:1fr;
 }
 
-.fade.show{
-opacity:1;
-transform:translateY(0);
+.cards{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:32px;
+}
+
 }
 
 </style>
 </head>
 
-
 <body>
 
 
-<!-- HERO -->
+<!-- 1 HERO -->
 
-<section class="hero fade">
+<section>
 
-<div class="container hero-grid">
+<div class="container grid">
 
 <div>
 
 <h1>O Método de 7 Dias Para Parar de Comer por Ansiedade</h1>
 
 <p>
-Aprenda a identificar gatilhos emocionais e recuperar o controle sobre sua alimentação sem dietas restritivas.
+Aprenda a identificar gatilhos emocionais e recuperar o controle da sua alimentação sem dietas restritivas.
 </p>
 
-<a href="SEU_LINK_CHECKOUT" class="btn">
+<a class="btn" href="SEU_LINK_CHECKOUT">
 Quero recuperar o controle da minha alimentação
 </a>
 
@@ -139,7 +150,7 @@ Quero recuperar o controle da minha alimentação
 
 <div>
 
-<img src="img/mockup-ebook.png">
+<img src="img/produto-mockup.png">
 
 </div>
 
@@ -149,27 +160,23 @@ Quero recuperar o controle da minha alimentação
 
 
 
-<!-- BARRA DE CONFIANÇA -->
-
 <div class="trust">
 
-✔ Compra 100% segura  
-✔ Acesso imediato após pagamento  
-✔ Garantia de reembolso em 7 dias  
+✔ Compra segura • ✔ Acesso imediato • ✔ Garantia de 7 dias
 
 </div>
 
 
 
-<!-- ESPELHO DA DOR -->
+<!-- 2 ESPELHO DA DOR -->
 
-<section class="section-alt fade">
+<section class="soft">
 
 <div class="container grid">
 
 <div>
 
-<img src="img/dor-donut.jpg">
+<img src="img/dor-compulsao.jpg">
 
 </div>
 
@@ -182,11 +189,11 @@ Mas quando percebe já está comendo sem controle.
 </p>
 
 <p>
-Depois vem a culpa, frustração e a promessa de começar novamente amanhã.
+Depois vem a culpa e a frustração.
 </p>
 
 <p>
-Se isso acontece com você, saiba que isso não é falta de disciplina.
+E a promessa de começar novamente amanhã.
 </p>
 
 </div>
@@ -197,48 +204,36 @@ Se isso acontece com você, saiba que isso não é falta de disciplina.
 
 
 
-<!-- EXPLICAÇÃO DO PROBLEMA -->
+<!-- 3 PROBLEMA -->
 
-<section class="fade">
+<section>
 
-<div class="container">
+<div class="container center">
 
-<h2 style="text-align:center">O problema não é falta de força de vontade</h2>
+<h2>O problema não é falta de disciplina</h2>
 
-<p style="max-width:800px;margin:auto;text-align:center">
-
-A compulsão alimentar geralmente acontece quando emoções como ansiedade, estresse ou frustração ativam o sistema de recompensa do cérebro.
-
+<p>
+A compulsão alimentar acontece quando emoções como ansiedade ou estresse ativam o sistema de recompensa do cérebro.
 </p>
 
-<div style="text-align:center;margin-top:50px">
-
-<img src="img/cerebro-compulsao.jpg" style="max-width:500px">
-
-</div>
+<img src="img/cerebro-compulsao.jpg" style="margin-top:40px;max-width:500px">
 
 </div>
 
 </section>
-<!-- MECANISMO -->
 
-<section class="section-alt fade">
 
-<div class="container">
 
-<h2 style="text-align:center">O método atua diretamente na raiz do problema</h2>
+<!-- 4 MECANISMO -->
 
-<p style="max-width:800px;margin:auto;text-align:center">
+<section class="soft">
 
-A maioria das soluções tenta apenas controlar o comportamento alimentar.
-O Método de 7 Dias trabalha diretamente na origem do problema: os gatilhos emocionais da compulsão alimentar.
+<div class="container center">
 
-</p>
+<h2>O método atua diretamente nos gatilhos emocionais</h2>
 
-<p style="max-width:800px;margin:30px auto;text-align:center">
-
-Quando você aprende a reconhecer esses gatilhos e interromper o impulso antes que ele aconteça, o ciclo começa a se quebrar naturalmente.
-
+<p>
+Ao identificar os gatilhos e interromper o impulso antes da ação, o ciclo da compulsão começa a se quebrar.
 </p>
 
 </div>
@@ -247,33 +242,17 @@ Quando você aprende a reconhecer esses gatilhos e interromper o impulso antes q
 
 
 
-<!-- CICLO DA COMPULSÃO -->
+<!-- 5 CICLO -->
 
-<section class="fade">
+<section>
 
-<div class="container">
+<div class="container center">
 
-<h2 style="text-align:center">O ciclo da compulsão alimentar</h2>
+<h2>O ciclo da compulsão alimentar</h2>
 
-<div style="max-width:800px;margin:50px auto;background:#E3F1E8;padding:40px;border-radius:12px;text-align:center;font-size:20px;font-weight:500">
+<p style="font-size:20px;margin-top:30px">
 
-Ansiedade  
-↓  
-Desejo por comida  
-↓  
-Comer impulsivamente  
-↓  
-Alívio momentâneo  
-↓  
-Culpa  
-↓  
-Repetição do ciclo
-
-</div>
-
-<p style="max-width:800px;margin:40px auto;text-align:center">
-
-Enquanto esse ciclo não for interrompido, a compulsão continua se repetindo.
+Ansiedade → Desejo → Comer impulsivamente → Alívio momentâneo → Culpa → Repetição
 
 </p>
 
@@ -283,27 +262,15 @@ Enquanto esse ciclo não for interrompido, a compulsão continua se repetindo.
 
 
 
-<!-- TRANSFORMAÇÃO -->
+<!-- 6 TRANSFORMAÇÃO -->
 
-<section class="section-alt fade">
+<section class="soft">
 
-<div class="container">
+<div class="container center">
 
-<h2 style="text-align:center">Uma nova relação com a comida é possível</h2>
+<h2>Uma nova relação com a comida é possível</h2>
 
-<div style="text-align:center;margin-top:40px">
-
-<img src="img/antes-depois.jpg" style="max-width:500px">
-
-</div>
-
-<p style="max-width:800px;margin:40px auto;text-align:center">
-
-Muitas pessoas acreditam que nunca conseguirão recuperar o controle da alimentação.
-
-Mas quando os gatilhos emocionais são compreendidos, a relação com a comida muda completamente.
-
-</p>
+<img src="img/transformacao.jpg" style="max-width:450px;margin-top:40px">
 
 </div>
 
@@ -311,15 +278,15 @@ Mas quando os gatilhos emocionais são compreendidos, a relação com a comida m
 
 
 
-<!-- APRESENTAÇÃO DO PRODUTO -->
+<!-- 7 PRODUTO -->
 
-<section class="fade">
+<section>
 
 <div class="container grid">
 
 <div>
 
-<img src="img/capa-ebook.png">
+<img src="img/ebook-capa.png">
 
 </div>
 
@@ -328,75 +295,139 @@ Mas quando os gatilhos emocionais são compreendidos, a relação com a comida m
 <h2>O Fim da Compulsão Alimentar</h2>
 
 <p>
-
 Um guia prático criado para ajudar pessoas que desejam recuperar o controle emocional sobre a alimentação.
-
 </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- 8 MÉTODO -->
+
+<section class="soft">
+
+<div class="container center">
+
+<h2>O método de 7 dias</h2>
+
+<p>Dia 1 — Identificar gatilhos</p>
+<p>Dia 2 — Consciência alimentar</p>
+<p>Dia 3 — Interromper impulsos</p>
+<p>Dia 4 — Controle emocional</p>
+<p>Dia 5 — Organização alimentar</p>
+<p>Dia 6 — Reprogramação de hábitos</p>
+<p>Dia 7 — Consolidação</p>
+
+</div>
+
+</section>
+
+
+
+<!-- 9 O QUE RECEBE -->
+
+<section>
+
+<div class="container center">
+
+<h2>Tudo que você recebe</h2>
+
+<img src="img/checklist-bonus.png" style="max-width:400px;margin-top:40px">
+
+</div>
+
+</section>
+
+
+
+<!-- 10 BENEFÍCIOS -->
+
+<section class="soft">
+
+<div class="container">
+
+<h2 class="center">Benefícios</h2>
+
+<div class="cards">
+
+<div class="card">✔ Reduzir episódios de compulsão</div>
+
+<div class="card">✔ Recuperar controle alimentar</div>
+
+<div class="card">✔ Desenvolver consciência alimentar</div>
+
+</div>
+
+</div>
+
+  </section>
+  <!-- 11 PROVA SOCIAL -->
+
+<section>
+
+<div class="container">
+
+<h2 class="center">O que algumas pessoas relataram</h2>
+
+<div class="cards">
+
+<div class="card">
+“Comecei a perceber meus gatilhos emocionais e isso mudou minha relação com a comida.”
+</div>
+
+<div class="card">
+“O material ajudou a entender por que eu comia por ansiedade.”
+</div>
+
+<div class="card">
+“As estratégias são simples e fáceis de aplicar.”
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- 12 FAQ -->
+
+<section class="soft">
+
+<div class="container center">
+
+<h2>Perguntas Frequentes</h2>
+
+<p><strong>Preciso fazer dieta restritiva?</strong><br>
+Não. O método foca em consciência alimentar.</p>
+
+<p style="margin-top:20px"><strong>Quando recebo o material?</strong><br>
+O acesso é imediato após a compra.</p>
+
+<p style="margin-top:20px"><strong>Funciona mesmo se já tentei dietas?</strong><br>
+Sim, porque trabalha nos gatilhos emocionais.</p>
+
+</div>
+
+</section>
+
+
+
+<!-- 13 GARANTIA -->
+
+<section>
+
+<div class="container center">
+
+<h2>Garantia de 7 dias</h2>
 
 <p>
-
-O material apresenta estratégias simples que podem ser aplicadas no dia a dia para interromper episódios de compulsão alimentar.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- MÉTODO 7 DIAS -->
-
-<section class="section-alt fade">
-
-<div class="container">
-
-<h2 style="text-align:center">O método de 7 dias</h2>
-
-<div style="max-width:700px;margin:40px auto">
-
-<p><strong>Dia 1:</strong> Identificar gatilhos emocionais</p>
-
-<p><strong>Dia 2:</strong> Desenvolver consciência alimentar</p>
-
-<p><strong>Dia 3:</strong> Interromper impulsos automáticos</p>
-
-<p><strong>Dia 4:</strong> Técnicas de controle da ansiedade</p>
-
-<p><strong>Dia 5:</strong> Organização alimentar consciente</p>
-
-<p><strong>Dia 6:</strong> Reprogramação de hábitos</p>
-
-<p><strong>Dia 7:</strong> Consolidação do controle alimentar</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- O QUE VOCÊ RECEBE -->
-
-<section class="fade">
-
-<div class="container">
-
-<h2 style="text-align:center">Tudo que você recebe</h2>
-
-<div style="text-align:center;margin-top:40px">
-
-<img src="img/checklist.jpg" style="max-width:420px">
-
-</div>
-
-<p style="max-width:700px;margin:40px auto;text-align:center">
-
-Ao adquirir o método você terá acesso ao material completo e aos bônus que ajudam na aplicação prática do processo.
-
+Se você não gostar do conteúdo, basta solicitar o reembolso.
 </p>
 
 </div>
@@ -405,133 +436,17 @@ Ao adquirir o método você terá acesso ao material completo e aos bônus que a
 
 
 
-<!-- BENEFÍCIOS -->
+<!-- 14 ANCORAGEM -->
 
-<section class="section-alt fade">
+<section class="soft">
 
-<div class="container">
-
-<h2 style="text-align:center">Benefícios</h2>
-
-<div style="max-width:700px;margin:40px auto">
-
-<p>✔ Identificar seus gatilhos emocionais</p>
-
-<p>✔ Reduzir episódios de compulsão alimentar</p>
-
-<p>✔ Recuperar o controle sobre sua alimentação</p>
-
-<p>✔ Desenvolver consciência alimentar</p>
-
-<p>✔ Construir uma relação mais saudável com a comida</p>
-
-</div>
-
-</div>
-
-</section>
-<!-- PROVA SOCIAL -->
-
-<section class="fade">
-
-<div class="container">
-
-<h2 style="text-align:center">O que algumas pessoas relataram após ler o material</h2>
-
-<div class="testimonials" style="margin-top:50px">
-
-<div class="testimonial">
-“Comecei a perceber meus gatilhos emocionais e isso mudou completamente minha relação com a comida.”
-</div>
-
-<div class="testimonial">
-“Os exercícios ajudaram a entender por que eu comia por ansiedade.”
-</div>
-
-<div class="testimonial">
-“Foi a primeira vez que consegui olhar para meus hábitos alimentares de forma consciente.”
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- FAQ -->
-
-<section class="section-alt fade">
-
-<div class="container">
-
-<h2 style="text-align:center">Perguntas Frequentes</h2>
-
-<div style="max-width:800px;margin:40px auto">
-
-<div class="faq-item">
-<button class="faq-question">Preciso fazer dieta restritiva?</button>
-<div class="faq-answer">
-<p>Não. O método foca em consciência alimentar e identificação de gatilhos emocionais.</p>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question">Quando recebo o material?</button>
-<div class="faq-answer">
-<p>O acesso é enviado imediatamente após a confirmação do pagamento.</p>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question">Funciona mesmo se eu já tentei outras dietas?</button>
-<div class="faq-answer">
-<p>Sim. O foco do método não é dieta, mas compreender os gatilhos emocionais da compulsão alimentar.</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- GARANTIA -->
-
-<section class="fade">
-
-<div class="container" style="text-align:center">
-
-<h2>Garantia incondicional de 7 dias</h2>
-
-<p style="max-width:700px;margin:30px auto">
-
-Você pode testar o conteúdo com tranquilidade.
-
-Se dentro de 7 dias achar que o material não ajudou, basta solicitar o reembolso e o valor será devolvido.
-
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- ANCORAGEM DE VALOR -->
-
-<section class="section-alt fade">
-
-<div class="container" style="text-align:center">
+<div class="container center">
 
 <h2>Valor real do material</h2>
 
-<p>Ebook completo – 19€</p>
-<p>Checklist anti-compulsão – 9€</p>
-<p>Guia de controle da ansiedade – 12€</p>
+<p>Ebook – 19€</p>
+<p>Checklist – 9€</p>
+<p>Guia ansiedade – 12€</p>
 <p>Plano alimentar – 7€</p>
 
 <p style="font-size:22px;margin-top:20px"><strong>Total: 47€</strong></p>
@@ -542,31 +457,21 @@ Se dentro de 7 dias achar que o material não ajudou, basta solicitar o reembols
 
 
 
-<!-- OFERTA -->
+<!-- 15 OFERTA -->
 
-<section class="fade">
+<section>
 
-<div class="container">
-
-<div class="price-box">
+<div class="container center">
 
 <h2>Oferta especial</h2>
 
-<p class="old">47€</p>
+<p style="text-decoration:line-through;color:#888">47€</p>
 
-<p class="new">Hoje apenas 12,90€</p>
+<p style="font-size:42px;color:#4F7D6A;font-weight:700">12,90€</p>
 
-<a href="SEU_LINK_CHECKOUT" class="btn">
+<a class="btn" href="SEU_LINK_CHECKOUT">
 Quero começar agora
 </a>
-
-<p style="margin-top:20px;font-size:14px">
-
-Pagamento seguro • Acesso imediato • Garantia de 7 dias
-
-</p>
-
-</div>
 
 </div>
 
@@ -574,15 +479,15 @@ Pagamento seguro • Acesso imediato • Garantia de 7 dias
 
 
 
-<!-- CTA FINAL -->
+<!-- 16 CTA FINAL -->
 
-<section class="section-alt fade">
+<section class="soft">
 
-<div class="container" style="text-align:center">
+<div class="container center">
 
 <h2>Comece hoje a recuperar o controle sobre sua alimentação</h2>
 
-<a href="SEU_LINK_CHECKOUT" class="btn">
+<a class="btn" href="SEU_LINK_CHECKOUT">
 Quero acesso imediato
 </a>
 
@@ -592,61 +497,12 @@ Quero acesso imediato
 
 
 
-<!-- FOOTER -->
+<footer style="background:#2f5c45;color:white;padding:40px;text-align:center">
 
-<footer>
-
-<p>© 2026 – Todos os direitos reservados</p>
-
-<p style="margin-top:10px;font-size:13px">
-
-Este conteúdo possui caráter informativo e educacional.
-
-</p>
+<p>© 2026 - Todos os direitos reservados</p>
 
 </footer>
 
 
-
-<!-- SCRIPTS -->
-
-<script>
-
-const faders = document.querySelectorAll('.fade');
-
-const appearOptions = {
-threshold:0.2
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-entries.forEach(entry=>{
-if(!entry.isIntersecting){
-return;
-}else{
-entry.target.classList.add("show");
-observer.unobserve(entry.target);
-}
-});
-}, appearOptions);
-
-faders.forEach(fader=>{
-appearOnScroll.observe(fader);
-});
-
-
-const questions = document.querySelectorAll(".faq-question");
-
-questions.forEach(q=>{
-q.addEventListener("click", ()=>{
-q.classList.toggle("active");
-const answer = q.nextElementSibling;
-
-if(answer.style.maxHeight){
-answer.style.maxHeight = null;
-}else{
-answer.style.maxHeight = answer.scrollHeight + "px";
-}
-});
-});
-
-                                                                                        </script>
+</body>
+  </html>
