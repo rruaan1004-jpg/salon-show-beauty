@@ -1,83 +1,419 @@
-import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-const navLinks = [
-{ label: "Início", href: "#inicio" },
-{ label: "Serviços", href: "#servicos" },
-{ label: "Sobre", href: "#sobre" },
-{ label: "Contato", href: "#contato" }];
+<title>O Método de 7 Dias Para Parar de Comer por Ansiedade</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+margin:0;
+background:#f9faf9;
+color:#333;
+line-height:1.7;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:70px 20px;
+}
+
+h1,h2,h3{
+color:#2f5c45;
+}
+
+h1{font-size:42px;}
+h2{font-size:32px;}
+
+.hero{
+background:linear-gradient(135deg,#2f5c45,#3d7c60);
+color:white;
+padding:100px 20px;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.hero img{width:100%;}
+
+.btn{
+display:inline-block;
+background:#ff7a00;
+color:white;
+padding:18px 30px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+margin-top:25px;
+}
+
+.section{
+background:white;
+margin:40px 0;
+border-radius:10px;
+padding:60px 40px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.center{text-align:center;}
+
+.benefits li{
+margin:12px 0;
+}
+
+.cycle{
+background:#e8f1ea;
+padding:30px;
+border-radius:10px;
+font-weight:500;
+text-align:center;
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:20px;
+}
+
+.testimonial{
+background:#f4f4f4;
+padding:25px;
+border-radius:8px;
+}
+
+.price-box{
+background:#e8f1ea;
+padding:50px;
+border-radius:10px;
+text-align:center;
+}
+
+.old{color:#999;text-decoration:line-through;}
+.new{font-size:42px;color:#ff7a00;font-weight:700;}
+
+.trust-bar{
+background:#f1f5f2;
+padding:20px;
+text-align:center;
+font-size:15px;
+}
+
+footer{
+background:#2f5c45;
+color:white;
+padding:40px;
+text-align:center;
+font-size:14px;
+}
+
+@media(max-width:900px){
+
+.hero-grid,.grid,.testimonials{
+grid-template-columns:1fr;
+}
+
+h1{font-size:32px;}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<h1>O Método de 7 Dias Para Parar de Comer por Ansiedade</h1>
+
+<p>Descubra como recuperar o controle emocional sobre a comida e interromper o ciclo da compulsão alimentar.</p>
+
+<a href="SEU_LINK_CHECKOUT" class="btn">Quero recuperar o controle da minha alimentação</a>
+
+</div>
+
+<div>
+<img src="/img/mockup-ebook.png">
+</div>
+
+</div>
+
+</section>
 
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+<!-- TRUST BAR -->
 
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="#inicio" className="font-display text-2xl font-bold text-primary tracking-wide">
-          Salon <span className="text-gradient-gold">Show</span>
-        </a>
+<div class="trust-bar">
 
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) =>
-          <a
-            key={link.href}
-            href={link.href}
-            className="font-body text-sm tracking-wider uppercase text-foreground/70 hover:text-primary transition-colors duration-300">
+✔ Compra 100% segura  
+✔ Acesso imediato após pagamento  
+✔ Garantia de reembolso em 7 dias  
 
-              {link.label}
-            </a>
-          )}
-          <a
+</div>
 
-            className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-body font-bold tracking-wide hover:opacity-90 transition-opacity" href="tel:+351965752907">
 
-            <Phone size={14} />
-            Agendar
-          </a>
-        </nav>
+<!-- ESPELHO DA DOR -->
 
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setIsOpen(!isOpen)}>
+<section class="container section grid">
 
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+<img src="/img/dor-donut.jpg">
 
-      <AnimatePresence>
-        {isOpen &&
-        <motion.div
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: "auto", opacity: 1 }}
-          exit={{ height: 0, opacity: 0 }}
-          className="md:hidden bg-card border-b border-border overflow-hidden">
+<div>
 
-            <nav className="flex flex-col items-center gap-4 py-6">
-              {navLinks.map((link) =>
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="font-body text-sm tracking-wider uppercase text-foreground/70 hover:text-primary transition-colors">
+<h2>Você se identifica com isso?</h2>
 
-                  {link.label}
-                </a>
-            )}
-              <a
-              href="tel:+5511999999999"
-              className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-bold">
+<p>Você promete que vai comer melhor.</p>
 
-                <Phone size={14} />
-                Agendar
-              </a>
-            </nav>
-          </motion.div>
-        }
-      </AnimatePresence>
-    </header>);
+<p>Mas quando percebe já está comendo sem controle.</p>
 
-};
+<p>Depois vem a culpa, frustração e a promessa de começar novamente.</p>
 
-export default Header;
+</div>
+
+</section>
+
+
+<!-- EXPLICAÇÃO -->
+
+<section class="container section center">
+
+<h2>O problema não é falta de disciplina</h2>
+
+<p>A compulsão alimentar geralmente está ligada a gatilhos emocionais que ativam o sistema de recompensa do cérebro.</p>
+
+<img src="/img/cerebro-compulsao.jpg" style="max-width:450px;">
+
+</section>
+
+
+<!-- MECANISMO -->
+
+<section class="container section center">
+
+<h2>O método atua diretamente nesses gatilhos</h2>
+
+<p>Ao identificar os gatilhos emocionais e desenvolver consciência alimentar, você interrompe o padrão automático da compulsão.</p>
+
+</section>
+
+
+<!-- CICLO -->
+
+<section class="container section center">
+
+<h2>O ciclo da compulsão alimentar</h2>
+
+<div class="cycle">
+
+Ansiedade → Desejo por comida → Comer impulsivamente →  
+Alívio momentâneo → Culpa → Repetição do ciclo
+
+</div>
+
+</section>
+
+
+<!-- TRANSFORMAÇÃO -->
+
+<section class="container section center">
+
+<h2>Uma nova relação com a comida é possível</h2>
+
+<img src="/img/antes-depois.jpg" style="max-width:450px;">
+
+</section>
+
+
+<!-- PRODUTO -->
+
+<section class="container section grid">
+
+<img src="/img/capa-ebook.png">
+
+<div>
+
+<h2>O Fim da Compulsão Alimentar</h2>
+
+<p>Um guia prático criado para ajudar pessoas que desejam recuperar o controle emocional sobre a alimentação.</p>
+
+</div>
+
+</section>
+
+
+<!-- MÉTODO -->
+
+<section class="container section">
+
+<h2 class="center">O método de 7 dias</h2>
+
+<ul class="benefits">
+
+<li>Dia 1 – Identificar gatilhos emocionais</li>
+<li>Dia 2 – Consciência alimentar</li>
+<li>Dia 3 – Interromper impulsos</li>
+<li>Dia 4 – Técnicas de controle da ansiedade</li>
+<li>Dia 5 – Organização alimentar</li>
+<li>Dia 6 – Reprogramação de hábitos</li>
+<li>Dia 7 – Consolidação do controle alimentar</li>
+
+</ul>
+
+</section>
+
+
+<!-- O QUE RECEBE -->
+
+<section class="container section center">
+
+<h2>Tudo que você recebe</h2>
+
+<p>Ebook completo + bônus exclusivos</p>
+
+<img src="/img/checklist.jpg" style="max-width:350px;">
+
+</section>
+
+
+<!-- BENEFÍCIOS -->
+
+<section class="container section">
+
+<h2 class="center">Benefícios</h2>
+
+<ul class="benefits">
+
+<li>✔ Reduzir episódios de compulsão</li>
+<li>✔ Recuperar controle sobre a alimentação</li>
+<li>✔ Desenvolver consciência alimentar</li>
+<li>✔ Melhorar relação com comida</li>
+
+</ul>
+
+</section>
+
+
+<!-- PROVA SOCIAL -->
+
+<section class="container section center">
+
+<h2>Alguns leitores comentaram</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">“Comecei a perceber meus gatilhos emocionais e isso mudou minha relação com a comida.”</div>
+
+<div class="testimonial">“O material ajudou a entender por que eu comia por ansiedade.”</div>
+
+<div class="testimonial">“As estratégias são simples e fáceis de aplicar.”</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="container section">
+
+<h2 class="center">Perguntas Frequentes</h2>
+
+<p><strong>Preciso fazer dieta?</strong><br>Não. O método foca em consciência alimentar.</p>
+
+<p><strong>Quando recebo o material?</strong><br>O acesso é imediato após a compra.</p>
+
+<p><strong>Existe garantia?</strong><br>Sim. Você tem 7 dias para solicitar reembolso.</p>
+
+</section>
+
+
+<!-- GARANTIA -->
+
+<section class="container section center">
+
+<h2>Garantia de 7 dias</h2>
+
+<p>Se não ficar satisfeito, basta solicitar o reembolso dentro do prazo.</p>
+
+</section>
+
+
+<!-- ANCORAGEM -->
+
+<section class="container section center">
+
+<h2>Valor do material</h2>
+
+<p>Ebook – 19€</p>
+<p>Checklist – 9€</p>
+<p>Guia ansiedade – 12€</p>
+<p>Plano alimentar – 7€</p>
+
+<p><strong>Total: 47€</strong></p>
+
+</section>
+
+
+<!-- OFERTA -->
+
+<section class="container section">
+
+<div class="price-box">
+
+<h2>Oferta especial</h2>
+
+<p class="old">47€</p>
+
+<p class="new">Hoje apenas 12,90€</p>
+
+<a href="SEU_LINK_CHECKOUT" class="btn">Quero começar agora</a>
+
+</div>
+
+</section>
+
+
+<!-- CTA FINAL -->
+
+<section class="container section center">
+
+<h2>Comece hoje a recuperar o controle sobre sua alimentação</h2>
+
+<a href="SEU_LINK_CHECKOUT" class="btn">Quero acesso imediato</a>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 – Todos os direitos reservados</p>
+
+<p>Este conteúdo tem caráter informativo e educacional.</p>
+
+</footer>
+
+
+</body>
+</html>r
