@@ -26,24 +26,131 @@ fbq('track','PageView');
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Inter',sans-serif;background:#F7FAF8;color:#1A1A1A;line-height:1.7;padding-bottom:120px;}
-.topbar{position:fixed;top:0;left:0;width:100%;background:#2f5c45;color:white;text-align:center;padding:10px;font-size:14px;z-index:9999;}
-.container{max-width:1100px;margin:auto;padding:80px 20px;}
+
+body{
+font-family:'Inter',sans-serif;
+background:#F7FAF8;
+color:#1A1A1A;
+line-height:1.7;
+padding-bottom:120px;
+padding-top:50px;
+}
+
+.topbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#2f5c45;
+color:white;
+text-align:center;
+padding:10px;
+font-size:14px;
+z-index:9999;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+}
+
 section{padding:70px 0;}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
-img{max-width:100%;border-radius:10px;}
-.img-center{max-width:500px;margin:40px auto;display:block;}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+img{
+max-width:100%;
+border-radius:10px;
+display:block;
+}
+
+.img-limit{
+max-width:300px;
+margin:30px auto;
+display:block;
+}
+
 h1{font-size:42px;margin-bottom:20px;}
 h2{font-size:32px;margin-bottom:20px;color:#2f5c45;}
 p{font-size:18px;color:#444;}
-.btn{display:inline-block;background:#4F7D6A;color:white;padding:18px 30px;border-radius:10px;text-decoration:none;margin-top:20px;font-weight:600;}
+
+.btn{
+display:inline-block;
+background:#4F7D6A;
+color:white;
+padding:18px 30px;
+border-radius:10px;
+text-decoration:none;
+margin-top:20px;
+font-weight:600;
+}
+
 .soft{background:#E3F1E8;}
-.center{text-align:center;max-width:750px;margin:auto;}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:40px;}
-.card{background:white;padding:30px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.05);}
+
+.center{
+text-align:center;
+max-width:750px;
+margin:auto;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.cta-center{
+text-align:center;
+margin-top:30px;
+}
+
 @media(max-width:900px){
 .grid{grid-template-columns:1fr;}
 .cards{grid-template-columns:1fr;}
+}
+
+/* CTA FIXO */
+.cta-fixo{
+position:fixed;
+bottom:15px;
+left:0;
+width:100%;
+display:flex;
+justify-content:center;
+z-index:9999;
+pointer-events:none;
+}
+
+.cta-fixo a{
+pointer-events:auto;
+background:#4F7D6A;
+color:white;
+padding:16px 20px;
+border-radius:12px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+max-width:320px;
+width:90%;
+text-align:center;
+}
+
+@media(min-width:900px){
+.cta-fixo{display:none;}
 }
 </style>
 
@@ -58,8 +165,8 @@ p{font-size:18px;color:#444;}
 <!-- HERO -->
 <section>
 <div class="container grid">
-<div>
 
+<div>
 <h1>
 Você acha que é falta de controlo.<br>
 <strong>Você come por ansiedade.</strong>
@@ -67,13 +174,17 @@ Você acha que é falta de controlo.<br>
 
 <p>
 Se você já tentou controlar a sua alimentação…<br><br>
-mas acaba comendo sem perceber no final do dia…<br><br>
+mas acaba comendo sem perceber…<br><br>
 o problema não é disciplina.<br><strong>É emocional.</strong>
 </p>
 
 <a class="btn" href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10">
 Quero parar de comer por ansiedade
 </a>
+
+<p style="font-size:14px;color:#666;margin-top:10px">
+🔒 Compra segura • 📩 Acesso imediato • 🛡 Garantia de 7 dias
+</p>
 
 </div>
 
@@ -84,230 +195,64 @@ Quero parar de comer por ansiedade
 </div>
 </section>
 
-<!-- DOR -->
-<section class="soft">
-<div class="container grid">
-<div><img src="dor-compulsao.jpg"></div>
-<div>
-<h2>Você promete que vai controlar…</h2>
-<p>Mas quando percebe já está comendo sem controle.</p>
-<p>Depois vem a culpa e a frustração.</p>
-<p>E a promessa de começar novamente amanhã.</p>
-</div>
-</div>
-</section>
-
 <!-- EXPLICAÇÃO -->
 <section>
 <div class="container center">
+
 <h2>O problema não é falta de disciplina</h2>
+
 <p>Existe um gatilho emocional que ativa automaticamente o seu comportamento.</p>
+
 <img src="cerebro-compulsao.jpg" class="img-limit">
+
 <p><strong>Não é falta de controlo. É um padrão emocional.</strong></p>
+
+<div class="cta-center">
+<a class="btn" href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10">
+Quero recuperar o controlo
+</a>
+</div>
+
 </div>
 </section>
 
 <!-- MÉTODO -->
 <section class="soft">
 <div class="container center">
-<h2>O método atua antes do impulso</h2>
-<p>Você aprende a identificar o gatilho e interromper o processo antes da compulsão.</p>
-</div>
-</section>
-
-<!-- CICLO -->
-<section>
-<div class="container center">
-<h2>O ciclo da compulsão alimentar</h2>
-<p>Ansiedade → Desejo → Comer → Alívio → Culpa → Repetição</p>
-</div>
-</section>
-
-<!-- BENEFÍCIOS -->
-<section class="soft">
-<div class="container">
-<h2 class="center">Benefícios</h2>
-<div class="cards">
-<div class="card">✔ Reduz episódios de compulsão</div>
-<div class="card">✔ Recupera o controlo</div>
-<div class="card">✔ Desenvolve consciência alimentar</div>
-</div>
-</div>
-</section>
-<!-- PROVA SOCIAL -->
-<section>
-<div class="container">
-<h2 class="center">Resultados de quem aplicou o método</h2>
-
-<div class="cards">
-<div class="card">
-“Pela primeira vez consegui perceber o que me fazia comer sem controlo.”
-</div>
-<div class="card">
-“Não é dieta. É entender o que está por trás — isso fez toda diferença.”
-</div>
-<div class="card">
-“Hoje sinto que tenho controlo novamente, sem sofrimento.”
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- TRANSFORMAÇÃO -->
-<section class="soft">
-<div class="container center">
-
-<h2>Veja o tipo de mudança que você pode alcançar</h2>
-
-<p style="margin-bottom:20px;">
-Isso não é sobre força de vontade — é sobre entender o comportamento.
-</p>
-
-<img src="transformacao.jpg" class="img-limit">
-
-<p style="margin-top:20px;">
-Quando você aprende a agir antes do impulso, o ciclo começa a quebrar naturalmente.
-</p>
-
-</div>
-</section>
-
-<!-- MÉTODO 7 DIAS -->
-<section class="soft">
-
-<div class="container center">
 
 <h2>Como funciona o método na prática</h2>
 
-<p style="margin-bottom:25px;">
-Este não é um conjunto de dicas soltas.
-É um processo guiado para quebrar o ciclo da compulsão passo a passo.
+<p style="margin-bottom:20px;">
+Processo guiado para quebrar o ciclo da compulsão.
 </p>
 
-<div style="text-align:left;max-width:600px;margin:auto;">
+<p><strong>Dia 1:</strong> Identificar gatilhos</p>
+<p><strong>Dia 2:</strong> Consciência alimentar</p>
+<p><strong>Dia 3:</strong> Interromper impulsos</p>
+<p><strong>Dia 4:</strong> Controle emocional</p>
+<p><strong>Dia 5:</strong> Organização alimentar</p>
+<p><strong>Dia 6:</strong> Reprogramação</p>
+<p><strong>Dia 7:</strong> Consolidação</p>
 
-<p><strong>Dia 1 — Identificar gatilhos</strong><br>
-Você aprende a reconhecer exatamente o que desencadeia os episódios de compulsão.
-</p>
-
-<p><strong>Dia 2 — Consciência alimentar</strong><br>
-Entender o momento em que o impulso começa — antes de perder o controlo.
-</p>
-
-<p><strong>Dia 3 — Interromper o impulso</strong><br>
-Técnicas simples para travar o comportamento automático.
-</p>
-
-<p><strong>Dia 4 — Controle emocional</strong><br>
-Aprender a lidar com ansiedade sem usar a comida como escape.
-</p>
-
-<p><strong>Dia 5 — Organização alimentar</strong><br>
-Ajustes práticos que reduzem episódios impulsivos.
-</p>
-
-<p><strong>Dia 6 — Reprogramação de hábitos</strong><br>
-Substituir padrões antigos por comportamentos mais conscientes.
-</p>
-
-<p><strong>Dia 7 — Consolidação</strong><br>
-Fixar o processo para que isso se torne natural no dia a dia.
-</p>
-
-</div>
-
-<p style="margin-top:25px;">
-<strong>Você não depende de força de vontade — você muda o padrão.</strong>
-</p>
-
-</div>
-
-</section>
-
-<!-- OFERTA -->
-<section>
-<div class="container center">
-
-<h2>Valor real do material</h2>
-
-<p>Ebook – 19€</p>
-<p>Checklist – 9€</p>
-<p>Guia ansiedade – 12€</p>
-<p>Plano alimentar – 7€</p>
-
-<p><strong>Total: 47€</strong></p>
-
-<p>Mas hoje você não precisa pagar os 47€.</p>
-
-<h2>Hoje você tem acesso por apenas</h2>
-
-<p style="font-size:42px;color:#4F7D6A;font-weight:700">12,90€</p>
-
+<div class="cta-center">
 <a class="btn" href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10">
 Quero começar agora
 </a>
-
 </div>
-</section>
-<!-- GARANTIA -->
-<section class="soft">
-<div class="container center">
-
-<h2>Garantia de 7 dias</h2>
-
-<p>Teste o material sem risco.</p>
-
-<p>Se não ajudar, você pode pedir reembolso.</p>
 
 </div>
 </section>
 
 <!-- FAQ -->
 <section>
-
 <div class="container center">
 
 <h2>Perguntas Frequentes</h2>
 
-<p>
-<strong>Isso funciona mesmo se eu já tentei várias dietas?</strong><br>
-Sim — porque o problema não está na dieta, mas na relação emocional com a comida. O método atua exatamente nesse ponto.
-</p>
-
-<p style="margin-top:25px">
-<strong>Vou precisar fazer restrições ou cortar alimentos?</strong><br>
-Não. O foco não é restringir, mas entender e controlar o comportamento.
-</p>
-
-<p style="margin-top:25px">
-<strong>E se eu não conseguir aplicar?</strong><br>
-O método foi criado para ser simples e prático. Você aplica no dia a dia, sem precisar mudar toda a sua rotina.
-</p>
-
-<p style="margin-top:25px">
-<strong>Quando recebo o acesso?</strong><br>
-Imediatamente após a confirmação da compra.
-</p>
-
-<p style="margin-top:25px">
-<strong>Isso é só mais um ebook?</strong><br>
-Não. É um processo guiado com exercícios práticos para você aplicar — não apenas teoria.
-</p>
-
-</div>
-
-</section>
-
-<!-- CTA FINAL -->
-<section class="soft">
-<div class="container center">
-
-<h2>Comece hoje a recuperar o controlo</h2>
-
-<a class="btn" href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10">
-Quero acesso imediato
-</a>
+<p><strong>Funciona mesmo?</strong><br>Sim, atua no emocional.</p>
+<p><strong>Preciso dieta?</strong><br>Não.</p>
+<p><strong>Quando recebo?</strong><br>Imediato.</p>
+<p><strong>Tem garantia?</strong><br>Sim, 7 dias.</p>
 
 </div>
 </section>
@@ -316,5 +261,11 @@ Quero acesso imediato
 <p>© 2026 - Todos os direitos reservados</p>
 </footer>
 
+<div class="cta-fixo">
+<a href="https://pay.hotmart.com/O104870398S?off=8d4mwxjo&checkoutMode=10">
+Garantir acesso ao método
+</a>
+</div>
+
 </body>
-</html>
+  </html>
