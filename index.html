@@ -153,20 +153,20 @@ text-align:center;
 .cta-fixo{display:none;}
 }
   <style>
-/* RESET DE ESPAÇAMENTO GLOBAL */
+/* RESET CONTROLADO */
 section {
   padding: 20px 15px !important;
   margin: 0 !important;
 }
 
 .container {
-  margin: 0 auto !important;
-  padding: 0 !important;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 h1, h2, h3 {
-  margin-top: 15px !important;
-  margin-bottom: 10px !important;
+  margin: 15px 0 10px !important;
 }
 
 p {
@@ -179,10 +179,11 @@ ul {
 }
 
 img {
-  margin: 15px 0 !important;
+  margin: 15px auto !important;
+  display: block;
 }
 
-/* REMOVE ESPAÇOS EXAGERADOS INLINE */
+/* controla excessos */
 [style*="margin-top"] {
   margin-top: 15px !important;
 }
